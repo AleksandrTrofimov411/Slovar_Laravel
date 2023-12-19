@@ -1,0 +1,26 @@
+header {
+    padding: 50px 0;
+    background: linear-gradient(to right, #1e5799 0%,#88c0fc 97%);
+}
+
+
+.slovar {
+   padding-top: 10px;
+}
+
+.button-search-words {
+    background-color: rgba(28,28,28,0);
+    border: none;
+    width: 30px;
+    height: 30px;
+
+}
+
+.bg-register {
+
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
