@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Word;
 
-class CategoryController
+class CategoryController extends BaseController
 {
 
 }

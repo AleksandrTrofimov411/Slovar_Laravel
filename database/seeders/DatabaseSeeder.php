@@ -14,7 +14,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         Words::factory(10)->create();
+        if (count(Category::all()) < Category::maxCategories()) {
+            for ($i = 1; $i <= Category::maxCategories(); $i++) {
+                Category::factory()->create();
+            }
+        }
+        Words::factory(10)->create();
+//        for ($i = 1; $i <= 26; $i++) {
+//            Category::factory()->create();
+//        }
+//         Category::factory(26)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

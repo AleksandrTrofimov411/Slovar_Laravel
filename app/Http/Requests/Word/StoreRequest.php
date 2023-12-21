@@ -25,10 +25,10 @@ class StoreRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'word' => ['string', new isWordExists, new isValidWord, new enLang],
-            'context' => 'string',
-            'translate' => ['string', new isWordExists, new isValidWord, new ruLang]
-        ];
+//        return [
+//            'word' => ['string', new isWordExists, new isValidWord, new enLang],
+//            'context' => 'string',
+//            'translate' => ['string', new isWordExists, new isValidWord, new ruLang]
+//        ];
     }
 }
