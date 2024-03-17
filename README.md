@@ -2,4 +2,7 @@
 
 1) composer install     
 2) php artisan migrate  
-3) php artisan db:seed - для 
+3) php artisan db:seed
+
+Кнопка удаления слова есть только у админов.
+Для этого в таблице пользователей в колнке role нужно прописать admin
