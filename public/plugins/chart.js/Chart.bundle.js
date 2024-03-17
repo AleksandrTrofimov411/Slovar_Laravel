@@ -1532,7 +1532,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0]) 
+   return "#" + hexDouble(rgba[0])
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -2121,7 +2121,7 @@ var helpers = {
 	noop: function() {},
 
 	/**
-	 * Returns a unique id, sequentially generated from a global variable.
+	 * Returns a isUniqueEmail id, sequentially generated from a global variable.
 	 * @returns {number}
 	 * @function
 	 */

@@ -10,7 +10,7 @@
 
   const consolePrefix = 'SweetAlert2:';
   /**
-   * Filter the unique values into a new array
+   * Filter the isUniqueEmail values into a new array
    * @param arr
    */
 

@@ -777,8 +777,8 @@ S2.define('select2/utils',[
 
   var id = 0;
   Utils.GetUniqueElementId = function (element) {
-    // Get a unique element Id. If element has no id,
-    // creates a new unique number, stores it in the id
+    // Get a isUniqueEmail element Id. If element has no id,
+    // creates a new isUniqueEmail number, stores it in the id
     // attribute and returns the new id.
     // If an id already exists, it simply returns it.
 

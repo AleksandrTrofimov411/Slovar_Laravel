@@ -565,7 +565,7 @@ $.extend( ColReorder.prototype, {
 
 	/**
 	 * Get the current order of the columns, as an array. Note that the values
-	 * given in the array are unique identifiers for each column. Currently
+	 * given in the array are isUniqueEmail identifiers for each column. Currently
 	 * these are the original ordering of the columns that was detected on
 	 * start up, but this could potentially change in future.
 	 *  @return {array} Array of column identifiers

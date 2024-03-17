@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Rules;
+namespace App\Rules\storeWord;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class ruLang implements ValidationRule
+class enLang implements ValidationRule
 {
     /**
      * Run the validation rule.
@@ -14,8 +14,8 @@ class ruLang implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        $chr_en = "А-Яа-яЁё";
-        if (!preg_match("/^[$chr_en]+$/u", $value)) {
+        $chr_en = "a-zA-Z";
+        if (!preg_match("/^[$chr_en]+$/", $value)) {
             $fail('The input must be in Latin');
         }
     }

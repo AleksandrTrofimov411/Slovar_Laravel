@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests\Word;
 
-use App\Rules\enLang;
-use App\Rules\isValidWord;
-use App\Rules\isWordExists;
-use App\Rules\ruLang;
+use App\Rules\storeWord\enLang;
+use App\Rules\storeWord\isValidWord;
+use App\Rules\storeWord\ruLang;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateRequest extends FormRequest

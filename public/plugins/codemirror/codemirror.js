@@ -5844,7 +5844,7 @@
   // marker continues beyond the start/end of the line. Markers have
   // links back to the lines they currently touch.
 
-  // Collapsed markers have unique ids, in order to be able to order
+  // Collapsed markers have isUniqueEmail ids, in order to be able to order
   // them, which is needed for uniquely determining an outer marker
   // when they overlap (they may nest, but not partially overlap).
   var nextMarkerId = 0;

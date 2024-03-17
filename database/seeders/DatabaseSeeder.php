@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
                 Category::factory()->create();
             }
         }
-        Words::factory(10)->create();
+        Words::factory(100)->create();
 //        for ($i = 1; $i <= 26; $i++) {
 //            Category::factory()->create();
 //        }

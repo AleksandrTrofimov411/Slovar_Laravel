@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Rules;
+namespace App\Rules\storeNewUser;
 
+use App\Models\User;
+use App\Models\Words;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class isValidWord implements ValidationRule
+class isUniqueEmail implements ValidationRule
 {
     /**
      * Run the validation rule.
@@ -14,11 +16,8 @@ class isValidWord implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        $value = str_split($value);
-        foreach ($value as $symbol) {
-            if (is_numeric($symbol) or $symbol === " ") {
-                $fail('Incorrect introduction');
-            }
+        if (User::where('email', $value)->exists()) {
+            $fail('This email has already been registered');
         }
     }
 }

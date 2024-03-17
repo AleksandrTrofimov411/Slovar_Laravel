@@ -3,6 +3,7 @@
 namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\storeNewUser\isUniqueEmail;
 
 class StoreRequest extends FormRequest
 {
@@ -23,7 +24,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'name' => ['string', 'max:20'],
-            'email' => ['string', 'email:rfc'],
+            'email' => ['string', 'email:rfc', new isUniqueEmail],
             'password' => ['min:6', 'required_with:confirmPassword', 'same:confirmPassword'],
             'confirmPassword' => 'min:6'
         ];

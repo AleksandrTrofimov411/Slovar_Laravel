@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Rules;
+namespace App\Rules\storeWord;
 
-use App\Models\Words;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class isWordExists implements ValidationRule
+class isValidWord implements ValidationRule
 {
     /**
      * Run the validation rule.
@@ -15,9 +14,11 @@ class isWordExists implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        dd($value);
-        if (Words::where('word', $value)->exists()) {
-            $fail('This word is already in the dictionary');
+        $value = str_split($value);
+        foreach ($value as $symbol) {
+            if (is_numeric($symbol) or $symbol === " ") {
+                $fail('Incorrect introduction');
+            }
         }
     }
 }

@@ -129,7 +129,7 @@ var ZeroClipboard_TableTools = {
 		// constructor for new simple upload client
 		this.handlers = {};
 
-		// unique ID
+		// isUniqueEmail ID
 		this.id = ZeroClipboard_TableTools.nextId++;
 		this.movieId = 'ZeroClipboard_TableToolsMovie_' + this.id;
 
@@ -145,7 +145,7 @@ var ZeroClipboard_TableTools = {
 
 ZeroClipboard_TableTools.Client.prototype = {
 
-	id: 0, // unique ID for us
+	id: 0, // isUniqueEmail ID for us
 	ready: false, // whether movie is ready to receive events or not
 	movie: null, // reference to movie object
 	clipText: '', // text to copy to clipboard
