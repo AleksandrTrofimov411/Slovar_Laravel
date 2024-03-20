@@ -1,5 +1,5 @@
 <?php
-
+//строгий мод
 namespace App\Models;
 
 use App\Models\Traits\Filterable;
@@ -12,5 +12,6 @@ class Words extends Model
     use HasFactory;
     use SoftDeletes;
     use Filterable;
+    //Тип данных
     protected $guarded = [];
 }

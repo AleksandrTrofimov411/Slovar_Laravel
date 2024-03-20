@@ -6,7 +6,7 @@ use App\Http\Requests\Word\StoreRequest;
 
 class StoreController extends BaseController
 {
-
+    //тут тоже самое все
     public function __invoke(StoreRequest $request)
     {
         $data = $request->validated();

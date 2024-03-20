@@ -1,5 +1,5 @@
 <?php
-
+///строгий мод
 namespace Database\Factories;
 
 use App\Models\Category;
@@ -17,13 +17,14 @@ class CategoryFactory extends Factory
      * @return array<string, mixed>
      */
 
+    ///тип данных??
     protected $model = Category::class;
     private static int $id = 0;
 
     public function definition(): array
     {
         self::increaseIdCounter();
-        $id = self::$id;
+        $id = self::$id; /// перед return должна быть пустая строка
         return [
             "id" => $id,
             "letter" => Service::getCategoryId($id)
@@ -33,6 +34,6 @@ class CategoryFactory extends Factory
     protected function increaseIdCounter(): void
     {
         self::$id++;
-    }
+    } // пустоя строка на 37
 
 }

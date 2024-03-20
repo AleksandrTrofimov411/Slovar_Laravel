@@ -1,5 +1,5 @@
 <?php
-
+//мод
 namespace App\Http\Filters;
 
 use Illuminate\Database\Eloquent\Builder;

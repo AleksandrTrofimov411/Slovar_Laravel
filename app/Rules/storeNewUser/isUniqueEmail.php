@@ -1,5 +1,5 @@
 <?php
-
+//мод
 namespace App\Rules\storeNewUser;
 
 use App\Models\User;
@@ -7,6 +7,7 @@ use App\Models\Words;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
+//существительное
 class isUniqueEmail implements ValidationRule
 {
     /**

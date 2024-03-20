@@ -1,5 +1,5 @@
 <?php
-
+//мод
 namespace App\Http\Middleware;
 
 use App\Providers\RouteServiceProvider;

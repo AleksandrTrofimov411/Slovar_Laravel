@@ -1,10 +1,11 @@
 <?php
-
+//мод
 namespace App\Policies;
 
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
+//Якрорь??
 class AdminPolicy
 {
     /**
@@ -28,7 +29,7 @@ class AdminPolicy
      */
     public function create(User $user): bool
     {
-        //
+        //??
     }
 
     /**
@@ -36,7 +37,7 @@ class AdminPolicy
      */
     public function update(User $user, User $model): bool
     {
-        //
+        //??
     }
 
     /**
@@ -44,7 +45,7 @@ class AdminPolicy
      */
     public function delete(User $user, User $model): bool
     {
-        //
+        //??
     }
 
     /**
@@ -52,7 +53,7 @@ class AdminPolicy
      */
     public function restore(User $user, User $model): bool
     {
-        //
+        //,??
     }
 
     /**
@@ -60,6 +61,6 @@ class AdminPolicy
      */
     public function forceDelete(User $user, User $model): bool
     {
-        //
+        //???
     }
 }

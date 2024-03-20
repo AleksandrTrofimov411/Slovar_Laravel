@@ -1,5 +1,5 @@
 <?php
-
+//мод
 namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
@@ -20,6 +20,7 @@ class StoreRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
+    //глагол
     public function rules(): array
     {
         return [

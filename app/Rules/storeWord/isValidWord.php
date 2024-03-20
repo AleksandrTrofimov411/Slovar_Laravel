@@ -1,10 +1,10 @@
 <?php
-
+//мод
 namespace App\Rules\storeWord;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
-
+//существительное
 class isValidWord implements ValidationRule
 {
     /**

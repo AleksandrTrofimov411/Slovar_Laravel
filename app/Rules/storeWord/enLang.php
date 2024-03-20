@@ -1,10 +1,11 @@
 <?php
-
+//мод
 namespace App\Rules\storeWord;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
+//существительно
 class enLang implements ValidationRule
 {
     /**
