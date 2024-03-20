@@ -1,11 +1,12 @@
 <?php
 
+declare(strict_types=1);
 namespace App\Rules\storeWord;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class isValidWord implements ValidationRule
+class EnglishText implements ValidationRule
 {
     /**
      * Run the validation rule.
@@ -14,11 +15,9 @@ class isValidWord implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        $value = str_split($value);
-        foreach ($value as $symbol) {
-            if (is_numeric($symbol) or $symbol === " ") {
-                $fail('Incorrect introduction');
-            }
+        $chr_en = "a-zA-Z";
+        if (!preg_match("/^[$chr_en]+$/", $value)) {
+            $fail('The input must be in Latin');
         }
     }
 }

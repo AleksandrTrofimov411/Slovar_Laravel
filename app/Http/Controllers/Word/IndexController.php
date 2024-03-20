@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 namespace App\Http\Controllers\Word;
 
 use App\Http\Filters\WordFilter;
@@ -8,7 +9,6 @@ use App\Models\Words;
 
 class IndexController extends BaseController
 {
-
     public function __invoke(FilterRequest $request)
     {
         $data = $request->validated();
@@ -16,5 +16,4 @@ class IndexController extends BaseController
         $words = Words::orderBy('word')->filter($filter)->paginate(15);
         return view('word.index', compact('words'));
     }
-
 }

@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
 namespace Database\Factories;
 
 use App\Models\Category;
-use App\Services\Word\Service;
+use App\Services\Word\WordService;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -24,9 +25,10 @@ class CategoryFactory extends Factory
     {
         self::increaseIdCounter();
         $id = self::$id;
+
         return [
             "id" => $id,
-            "letter" => Service::getCategoryId($id)
+            "letter" => WordService::getLetterByCategoryId($id)
         ];
     }
 
@@ -34,5 +36,4 @@ class CategoryFactory extends Factory
     {
         self::$id++;
     }
-
 }

@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
 namespace Database\Factories;
 
 use App\Models\Words;
-use App\Services\Word\Service;
+use App\Services\Word\WordService;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,11 +23,12 @@ class WordsFactory extends Factory
     public function definition(): array
     {
         $word = $this->faker->word;
+
         return [
             "word" => $word,
             "context" => $this->faker->text,
             "translate" => 'Слово',
-            "category_id" => Service::getCategoryId($word)
+            "category_id" => WordService::getCategoryIdByWord($word)
         ];
     }
 }

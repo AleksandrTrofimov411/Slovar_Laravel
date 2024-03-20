@@ -1,11 +1,11 @@
 <?php
 
+declare(strict_types=1);
 namespace App\Http\Requests\Word;
 
-use App\Rules\storeWord\enLang;
-use App\Rules\storeWord\isValidWord;
-use App\Rules\storeWord\isWordExists;
-use App\Rules\storeWord\ruLang;
+use App\Rules\storeWord\EnglishText;
+use App\Rules\storeWord\RussiaText;
+use App\Rules\storeWord\Word;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreRequest extends FormRequest
@@ -26,9 +26,9 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'word' => ['string', new isWordExists, new isValidWord, new enLang],
+            'word' => ['string', 'unique:App\Models\Words,word', new Word, new EnglishText],
             'context' => 'string',
-            'translate' => ['string', new isWordExists, new isValidWord, new ruLang]
+            'translate' => ['string', 'unique:App\Models\Words,word', new Word, new RussiaText]
         ];
     }
 }

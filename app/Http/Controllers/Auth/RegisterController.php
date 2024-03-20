@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -11,7 +12,6 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-
     public function create()
     {
         return view('auth.register');
@@ -24,6 +24,7 @@ class RegisterController extends Controller
         $user = User::create($user);
         $user['password'] = Hash::make($user['password']);
         Auth::login($user);
+
         return redirect(RouteServiceProvider::HOME);
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
+declare(strict_types=1);
 namespace App\Rules\storeWord;
 
-use App\Models\Words;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class isWordExists implements ValidationRule
+class RussiaText implements ValidationRule
 {
     /**
      * Run the validation rule.
@@ -15,8 +15,9 @@ class isWordExists implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        if (Words::where('word', $value)->exists()) {
-            $fail('This word is already in the dictionary');
+        $chr_en = "А-Яа-яЁё";
+        if (!preg_match("/^[$chr_en]+$/u", $value)) {
+            $fail('The input must be in Latin');
         }
     }
 }
