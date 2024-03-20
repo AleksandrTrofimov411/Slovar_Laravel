@@ -1,5 +1,5 @@
 <?php
-
+//мод
 namespace App\Providers;
 
 use Illuminate\Cache\RateLimiting\Limit;
@@ -22,6 +22,7 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      */
+    //бот?
     public function boot(): void
     {
         RateLimiter::for('api', function (Request $request) {

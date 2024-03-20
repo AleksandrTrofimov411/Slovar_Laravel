@@ -1,5 +1,5 @@
 <?php
-
+//мод
 namespace App\Providers;
 
 use App\Models\Words;
@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        //??
     }
 
     /**

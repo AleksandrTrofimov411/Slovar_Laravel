@@ -1,5 +1,5 @@
 <?php
-
+//мод
 namespace App\Rules\storeWord;
 
 use App\Models\Words;

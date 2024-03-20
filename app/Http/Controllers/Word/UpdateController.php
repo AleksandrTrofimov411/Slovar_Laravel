@@ -8,7 +8,7 @@ use App\Models\Words;
 
 class UpdateController extends BaseController
 {
-
+    //тоже самое
     public function __invoke(UpdateRequest $request, Words $word)
     {
         $data = $request->validated();

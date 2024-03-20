@@ -1,5 +1,5 @@
 <?php
-
+//мод
 namespace App\Http\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
@@ -21,6 +21,7 @@ abstract class AbstractFilter implements FilterInterface
 
     abstract protected function getCallbacks(): array;
 
+    //тип данных??
     public function apply(Builder $builder)
     {
         $this->before($builder);

@@ -1,5 +1,5 @@
 <?php
-
+ /// строгий мод
 namespace Database\Factories;
 
 use App\Models\Words;
